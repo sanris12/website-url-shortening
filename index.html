@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- icon -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link href="dist/output.css" rel="stylesheet" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="p-5 lg:px-28 lg:py-7">
+      <div class="container flex justify-between items-center lg:gap-5">
+        <img src="images/logo.svg" alt="logo" />
+        <i class="bx bx-menu text-4xl text-grayishvilet lg:hidden"></i>
+
+        <div role="menu" class="menu z-50 hidden absolute bg-regal-blue w-10/12 right-7 top-16 rounded-md flex flex-col items-center px-4 py-7 lg:static lg:flex lg:bg-transparent lg:flex-row lg:justify-between md:w-full lg:py-0">
+          <ul class="flex flex-col items-center gap-3 pb-3 border-b border-b-slate-500 w-full lg:flex-row lg:border-none lg:pb-0 lg:w-max">
+            <li><a href="" class="text-lg text-white font-poppins lg:text-grayishvilet lg:hover:text-verydarkblue transition duration-200">Features</a></li>
+            <li><a href="" class="text-lg text-white font-poppins lg:text-grayishvilet lg:hover:text-verydarkblue transition duration-200">Pricing</a></li>
+            <li><a href="" class="text-lg text-white font-poppins lg:text-grayishvilet lg:hover:text-verydarkblue transition duration-200">Resources</a></li>
+          </ul>
+
+          <div class="buttons flex flex-col gap-3 pt-3 w-full lg:flex-row lg:pt-0 lg:w-max lg:gap-5">
+            <button class="text-lg text-white font-poppins lg:text-grayishvilet lg:hover:text-verydarkblue transition duration-200">Login</button>
+            <button class="text-lg text-white font-poppins bg-cyan py-2 rounded-full hover:bg-opacity-80 transition duration-200 lg:px-6">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- header start -->
+    <header role="banner" class="lg:pl-28 lg:py-7 lg:pr-0">
+      <div class="container lg:flex lg:flex-row-reverse lg:items-center overflow-hidden">
+        <div class="hero-right overflow-hidden w-full sm:overflow-visible">
+          <img src="images/illustration-working.svg" alt="illustration-working" class="translate-x-16 sm:translate-x-5" />
+        </div>
+
+        <div class="hero-left p-5 text-center lg:text-left lg:pl-0">
+          <h1 class="text-4xl text-verydarkblue font-poppins font-bold lg:text-5xl">More than just shorter links</h1>
+          <p class="text-lg font-poppins text-grayishvilet my-5">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+          <button class="text-lg text-white font-poppins bg-cyan rounded-full hover:bg-opacity-80 transition duration-200 px-8 py-2">Get Started</button>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- section app start -->
+    <section role="main" class="bg-slate-200 px-5 pb-20 mt-20 lg:px-28">
+      <div class="container">
+        <div class="bg-regal-blue -translate-y-1/2 rounded-lg p-5 relative overflow-hidden">
+          <img src="images/bg-shorten-mobile.svg" alt="bg-shorten" class="bg-shorten absolute -z-10 top-0 right-0 object-cover" />
+          <div class="flex flex-col gap-5 lg:flex-row lg:p-10">
+            <input id="input-url" type="text" role="form" placeholder="Shorten a link here..." class="px-5 py-2.5 rounded-md focus:outline focus:outline-red lg:w-3/4" />
+            <button id="btn-shortlink" role="button" class="text-lg text-white font-poppins bg-cyan rounded-md hover:bg-opacity-80 active:scale-95 transition duration-200 px-8 py-2 lg:w-1/4">Shorten It!</button>
+          </div>
+        </div>
+
+        <div id="container-shortlink" class="-mt-10 flex flex-col gap-5">
+          <!-- tamplate  -->
+          <!-- <div class="card-shortlink bg-white py-5 flex flex-col gap-3 rounded-md lg:flex-row lg:items-center lg:justify-between">
+            <div class="link-user text-verydarkblue font-poppins border-b border-gray pb-2 px-5 lg:border-none lg:pb-0">https://google.com/sepak-bola</div>
+            <div class="flex flex-col gap-2 lg:items-center lg:flex-row">
+              <div class="link-shortlink text-cyan font-poppins px-5">https://shor.lnk/212</div>
+              <button role="button" class=".btn-copy-link text-lg text-white font-poppins bg-cyan rounded-md hover:bg-opacity-80 active:scale-95 transition duration-200 py-1.5 mx-5 lg:px-10">copy</button>
+            </div>
+          </div> -->
+          <!-- tamplate  -->
+        </div>
+      </div>
+    </section>
+    <!-- section app end -->
+
+    <!-- section statistic start -->
+    <section class="bg-slate-200 px-5 pb-20 lg:px-28">
+      <div class="container">
+        <h2 class="text-3xl text-verydarkblue font-poppins font-bold lg:text-4xl text-center">Advanced Statistics</h2>
+        <p class="text-md font-poppins text-grayishvilet text-center my-5 lg:w-1/2 lg:m-auto lg:mt-5">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+        <div class="mt-20 flex flex-col gap-16 lg:flex-row lg:gap-7 lg:items-start">
+          <div class="card-statistic bg-white px-5 pb-5 flex flex-col gap-3 rounded-md items-center lg:w-1/3 relative">
+            <div class="w-20 h-20 bg-verydarkviolet rounded-full -mt-10 lg:-ml-40"><img src="images/icon-brand-recognition.svg" alt="icon-brand-recognition" class="p-5" /></div>
+
+            <h3 class="text-2xl text-verydarkblue font-poppins font-bold lg:text-4xl text-center lg:text-left">Brand Recognition</h3>
+
+            <p class="text-md font-poppins text-grayishvilet text-center lg:text-left">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+            <div class="w-5 h-16 bg-darkviolet absolute -bottom-16 lg:bottom-1/2 lg:w-7 lg:h-5 lg:-right-7"></div>
+          </div>
+
+          <div class="card-statistic bg-white px-5 pb-5 flex flex-col gap-3 rounded-md items-center lg:w-1/3 lg:mt-10 relative">
+            <div class="w-20 h-20 bg-verydarkviolet rounded-full -mt-10 lg:-ml-40 absolute"><img src="images/icon-detailed-records.svg" alt="icon-detailed-records" class="p-5" /></div>
+
+            <h3 class="text-2xl text-verydarkblue font-poppins font-bold mt-14 lg:text-4xl text-center lg:text-left">Detailed Records</h3>
+
+            <p class="text-md font-poppins text-grayishvilet text-center lg:text-left">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            <div class="w-5 h-16 bg-darkviolet absolute -bottom-16 lg:bottom-1/2 lg:w-7 lg:h-5 lg:-right-7"></div>
+          </div>
+
+          <div class="card-statistic bg-white px-5 pb-5 flex flex-col gap-3 rounded-md items-center lg:w-1/3 lg:mt-20">
+            <div class="w-20 h-20 bg-verydarkviolet rounded-full -mt-10 lg:-ml-40 absolute"><img src="images/icon-fully-customizable.svg" alt="icon-fully-customizable" class="p-5" /></div>
+
+            <h3 class="text-2xl text-verydarkblue font-poppins font-bold mt-14 lg:text-4xl text-center lg:text-left">Fully Customizable</h3>
+
+            <p class="text-md font-poppins text-grayishvilet text-center lg:text-left">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section statistic end -->
+
+    <!-- section boost start -->
+    <section class="bg-darkviolet relative">
+      <img src="images/bg-boost-mobile.svg" alt="bg-boost" class="bg-boost h-full w-full object-cover absolute mix-blend-lighten" />
+      <div class="container py-16 px-5 flex flex-col items-center gap-5 lg:py-14">
+        <h2 class="text-white text-2xl font-poppins font-bold">Boost your links today</h2>
+        <button class="text-lg text-white font-poppins bg-cyan rounded-full hover:bg-opacity-80 transition duration-200 px-8 py-2">Get Started</button>
+      </div>
+    </section>
+
+    <!-- section bost end -->
+
+    <!-- footer start -->
+    <footer class="bg-verydarkviolet py-10 px-5 lg:px-28">
+      <div class="container w-full flex flex-col items-center gap-5 lg:flex-row lg:items-start lg:justify-between">
+        <img src="images/logo-footer.svg" alt="" />
+
+        <div class="w-full lg:flex gap-5 lg:w-max">
+          <ul class="text-center mb-5 lg:text-left">
+            <li class="mb-3"><a href="" class="font-poppins text-white font-semibold">Features</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">Link Shortening</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet"> Branded Links</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">Analytics</a></li>
+          </ul>
+
+          <ul class="text-center mb-5 lg:text-left">
+            <li class="mb-3"><a href="" class="font-poppins text-white font-semibold">Resources</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">Blog</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet"> Developers</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">Support</a></li>
+          </ul>
+
+          <ul class="text-center mb-8 lg:text-left lg:mb-0">
+            <li class="mb-3"><a href="" class="font-poppins text-white font-semibold">Company</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">About</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet"> Our Team</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">Careers</a></li>
+            <li><a href="" class="font-poppins text-grayishvilet">Contact</a></li>
+          </ul>
+        </div>
+
+        <ul class="w-full flex flex-row justify-evenly lg:w-max lg:gap-5">
+          <li>
+            <a href="" class="font-poppins text-white font-semibold"><img src="images/icon-facebook.svg" alt="icon-facebook" /></a>
+          </li>
+          <li>
+            <a href="" class="font-poppins text-grayishvilet"><img src="images/icon-twitter.svg" alt="icon-twitter" /></a>
+          </li>
+          <li>
+            <a href="" class="font-poppins text-grayishvilet"><img src="images/icon-pinterest.svg" alt="icon-pinterest" /></a>
+          </li>
+          <li>
+            <a href="" class="font-poppins text-grayishvilet"><img src="images/icon-instagram.svg" alt="icon-instagram" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
