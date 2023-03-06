@@ -32,6 +32,16 @@ btnShortlink.addEventListener("click", () => {
       div.classList.add(...classDiv);
       div.innerHTML = tamplate(urlUser.value, data);
       containerShortlink.appendChild(div);
+      
+      const btnCopy = document.querySelector(".btn-copy-link")
+    
+      btnCopy.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+        let copy = e.target.previousElementSibling.innerText;
+        navigator.clipboard.writeText(copy);
+        alert("copyned")
+    }
+    
     });
 });
 
@@ -40,7 +50,7 @@ function tamplate(longLink, shortLink) {
   return (tamp = `<div class="link-user text-verydarkblue font-poppins border-b border-gray pb-2 px-5 lg:border-none lg:pb-0">${longLink}</div>
 <div class="flex flex-col gap-2 lg:items-center lg:flex-row ">
   <div class="link-shortlink text-cyan font-poppins px-5">${shortLink}</div>
-  <button onclick=alert("copined") role="button" class=".btn-copy-link text-lg text-white font-poppins bg-cyan rounded-md hover:bg-opacity-80 active:scale-95 transition duration-200 py-1.5 mx-5 lg:px-10 active:bg-darkviolet">
+  <button  class=".btn-copy-link text-lg text-white font-poppins bg-cyan rounded-md hover:bg-opacity-80 active:scale-95 transition duration-200 py-1.5 mx-5 lg:px-10 active:bg-darkviolet">
     copy
   </button>
 </div>`);
