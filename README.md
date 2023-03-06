@@ -32,14 +32,14 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/sanris12/website-url-shortening](https://github.com/sanris12/website-url-shortening)
+- Live Site URL: [https://website-url-shortening.vercel.app/](https://website-url-shortening.vercel.app/)
 
 ## My process
 
 ### Built with
 
-- htnl
+- HTML5
 - CSS
 - Tailwindcss
 - Mobile-first workflow
